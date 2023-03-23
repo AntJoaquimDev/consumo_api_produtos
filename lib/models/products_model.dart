@@ -47,12 +47,12 @@ class ProductsModel {
       price: map[' price'] * 1.0,
       discountPercentage: map[' discountPercentage'] * 1.0,
       rating: map[' rating'] * 1.0,
-      stock: map[' stock'] * 1.0,
+      stock: map[' stock'] ?? 0,
       brand: map[' brand'] ?? '',
       category: map[' category'] ?? '',
       thumbnail: map[' thumbnail'] ?? '',
       images: List<String>.from(
-        map[' images'] as List,
+        (map[' images'] as List),
       ),
     );
   }
