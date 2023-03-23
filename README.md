@@ -1,7 +1,8 @@
-# consumo_api2
+# App-Consumo_Api (Flutter e Dart)
 
 A new Flutter project.
-
+#pequeno de consumo de api, que lista peodutos de uma api para estudos.
+https://dummyjson.com/products
 ## Getting Started
 
 This project is a starting point for a Flutter application.
