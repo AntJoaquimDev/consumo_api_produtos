@@ -97,25 +97,31 @@ class _MyHomePageState extends State<MyHomePage> {
                             fontSize: 20,
                           ),
                         ),
-                        subtitle: Column(
-                          children: [
-                            Text('R\$ ${item.price}',
+                        subtitle: Card(
+                          child: Column(
+                            // mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'R\$ ${item.price}',
                                 style: const TextStyle(
                                   color: Colors.black54,
                                   fontWeight: FontWeight.w600,
-                                  fontSize: 20,
-                                )),
-                            Text(
-                              item.description,
-                              style: const TextStyle(
-                                color: Colors.black54,
-                                fontWeight: FontWeight.w600,
-                                fontSize: 20,
+                                  fontSize: 18,
+                                ),
                               ),
-                              overflow: TextOverflow.ellipsis,
-                              maxLines: 2,
-                            ),
-                          ],
+                              Text(
+                                item.description,
+                                style: const TextStyle(
+                                  color: Colors.black87,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 18,
+                                ),
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 5,
+                              ),
+                            ],
+                          ),
                         )),
                   ],
                 );
