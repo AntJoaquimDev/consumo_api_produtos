@@ -42,20 +42,37 @@ class ProductsModel {
 
   factory ProductsModel.fromMap(Map<String, dynamic> map) {
     return ProductsModel(
-      title: map[' title'] ?? '',
-      description: map[' description'] ?? '',
-      price: map[' price'] * 1.0,
-      discountPercentage: map[' discountPercentage'] * 1.0,
-      rating: map[' rating'] * 1.0,
-      stock: map[' stock'] ?? 0,
-      brand: map[' brand'] ?? '',
-      category: map[' category'] ?? '',
-      thumbnail: map[' thumbnail'] ?? '',
-      images: List<String>.from(
-        (map[' images'] as List),
-      ),
+      title: map['title'] ?? '',
+      description: map['description'] ?? '',
+      price: map['price'] * 1.0,
+      discountPercentage: map['discountPercentage'] * 1.0,
+      rating: map['rating'] * 1.0,
+      stock: map['stock'] ?? 0,
+      brand: map['brand'] ?? '',
+      category: map['category'] ?? '',
+      thumbnail: map['thumbnail'] ?? '',
+      images: List<String>.from((map['images'] as List)),
     );
   }
+  /*products": [
+{
+"title": "iPhone 9",
+"description": "An apple mobile which is nothing like apple",
+"price": 549,
+"discountPercentage": 12.96,
+"rating": 4.69,
+"stock": 94,
+"brand": "Apple",
+"category": "smartphones",
+"thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+"images": [
+"https://i.dummyjson.com/data/products/1/1.jpg",
+"https://i.dummyjson.com/data/products/1/2.jpg",
+"https://i.dummyjson.com/data/products/1/3.jpg",
+"https://i.dummyjson.com/data/products/1/4.jpg",
+"https://i.dummyjson.com/data/products/1/thumbnail.jpg"
+]
+},*/
 
   String toJson() => json.encode(toMap());
 

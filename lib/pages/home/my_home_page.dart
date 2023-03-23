@@ -13,9 +13,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   //implementar uma instancia de ProductStore
   final ProductsStores store = ProductsStores(
-    repository: ProductRepository(
-      client: HttpClient(),
-    ),
+    repository: ProductRepository(response: HttpClient()),
   );
   @override
   void initState() {
@@ -101,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         subtitle: Column(
                           children: [
-                            Text('r${item.price}',
+                            Text('R\$ ${item.price}',
                                 style: const TextStyle(
                                   color: Colors.black54,
                                   fontWeight: FontWeight.w600,
