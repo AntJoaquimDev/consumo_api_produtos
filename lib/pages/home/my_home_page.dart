@@ -105,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               Text(
                                 'R\$ ${item.price}',
                                 style: const TextStyle(
-                                  color: Colors.black54,
+                                  color: Colors.green,
                                   fontWeight: FontWeight.w600,
                                   fontSize: 18,
                                 ),
