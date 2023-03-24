@@ -3,14 +3,14 @@ import 'package:consumo_api2/pages/stores/products_stores.dart';
 import 'package:consumo_api2/repositories/product_repository.dart';
 import 'package:flutter/material.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class ProductPage extends StatefulWidget {
+  const ProductPage({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<ProductPage> createState() => _ProductPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _ProductPageState extends State<ProductPage> {
   //implementar uma instancia de ProductStore
   final ProductsStores store = ProductsStores(
     repository: ProductRepository(response: HttpClient()),
