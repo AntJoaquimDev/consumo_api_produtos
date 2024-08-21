@@ -72,7 +72,7 @@ class _ProductPageState extends State<ProductPage> {
           } else {
             return ListView.separated(
               separatorBuilder: (context, index) => const SizedBox(
-                height: 32,
+                height: 3,
               ),
               padding: const EdgeInsets.all(10),
               itemCount: store.state.value.length,
@@ -88,41 +88,42 @@ class _ProductPageState extends State<ProductPage> {
                       ),
                     ),
                     ListTile(
-                        contentPadding: EdgeInsets.zero,
-                        title: Text(
-                          item.title,
-                          style: const TextStyle(
-                            color: Colors.black54,
-                            fontWeight: FontWeight.w600,
-                            fontSize: 20,
-                          ),
+                      contentPadding: EdgeInsets.zero,
+                      title: Text(
+                        item.title,
+                        style: const TextStyle(
+                          color: Colors.black54,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 20,
                         ),
-                        subtitle: Card(
-                          child: Column(
-                            // mainAxisAlignment: MainAxisAlignment.end,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'R\$ ${item.price}',
-                                style: const TextStyle(
-                                  color: Colors.green,
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 18,
-                                ),
+                      ),
+                      subtitle: Card(
+                        child: Column(
+                          // mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'R\$ ${item.price}',
+                              style: const TextStyle(
+                                color: Colors.green,
+                                fontWeight: FontWeight.w600,
+                                fontSize: 18,
                               ),
-                              Text(
-                                item.description,
-                                style: const TextStyle(
-                                  color: Colors.black87,
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 18,
-                                ),
-                                overflow: TextOverflow.ellipsis,
-                                maxLines: 5,
+                            ),
+                            Text(
+                              item.description,
+                              style: const TextStyle(
+                                color: Colors.black87,
+                                fontWeight: FontWeight.w600,
+                                fontSize: 18,
                               ),
-                            ],
-                          ),
-                        )),
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 5,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ],
                 );
               },
